@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Developer from './components/Developer'
 
 export default function Home() {
   return (
@@ -11,18 +12,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <h3>About myself</h3>
-          <p>
-            We'll I'm an introvert, I always try smiling, even though I am sad. I always challange myself through coding
-            and life in general. I spend most of my time coding or practicing maths. I'm person who likes to chill with his
-            family and friends. 
-          </p>
-          <p>
-            After high school, I furthered my studies in System Development and Software Engineering. I like upskilling myself
-            in the following frameworks and programming languages, React, Node.js, Flask, Javascript, and Python.
-          </p>
-          <p>
-            I like cooking, and Mountain hiking those are some of my hobbies.
-          </p>
+          <Developer />
         </div>
         <div className={styles.aside}>
           <h3>My hobbies</h3>
@@ -39,7 +29,7 @@ export default function Home() {
             Besides the fact that 'SovTech' is a software development company. When I did my research about 
             the company, different sources, and employees all say positive things about the company. Weather young or old 
             people treat each other with respect. There's room for improvement and/or growth. That is one of the things I like
-            about <span>SovTech</span>. The research i conducted states that there is a great company culture.
+            about SovTech. The research i conducted states that there is a great company culture.
           </p>
           <br />
           <p>
