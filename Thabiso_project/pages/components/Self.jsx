@@ -23,13 +23,13 @@ const Self = () => {
     <>
     {
         loading ? (
-          <div style={{marginLeft: 350}}>
+          <div className='self-loading'>
             <Loading />
           </div>
         ) : (
           <>
             {
-              data.map(info => <p>{info.text}</p>)
+              data.map((info, index) => <p key={index}>{info.text}</p>)
             }
           </> 
         )

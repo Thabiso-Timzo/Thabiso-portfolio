@@ -22,13 +22,13 @@ const Hobbies = () => {
     <>
     {
       loading ? (
-        <div style={{marginLeft: 80}}>
+        <div className='hobbies-loading'>
           <Loading />
         </div>
       ) : (
         <ul>
         {
-          data.map(info => <li>{info.text}</li>)
+          data.map((info, index) => <li key={index}>{info.text}</li>)
         }
         </ul>
       )

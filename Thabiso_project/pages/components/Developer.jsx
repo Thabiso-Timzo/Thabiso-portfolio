@@ -23,13 +23,13 @@ const Developer = () => {
     <>
     {
         loading ? (
-          <div style={{marginLeft: 450}}>
+          <div className='developer-loading'>
             <Loading />
           </div>
         ) : (
           <>
             {
-              data.map(info => <p>{info.text}</p>)
+              data.map((info, index) => <p key={index}>{info.text}</p>)
             }
           </> 
         )
