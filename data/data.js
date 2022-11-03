@@ -10,7 +10,7 @@ export const developerData = [
     ,
     {
         id: 3,
-        text: "I\’ve always loved to code and designing, since from my days in high school. So I’m excited to see that coding and ux/ui design is a big part of SovTech. Programming has always been fun for me, the challenge of solving problems tells a story and convey an idea. There's so many things i can learn from mentor or SovTech employees."
+        text: "I\’ve always loved to code and designing, since from my days in high school. So I’m excited to see that coding and ux/ui design is a big part of SovTech. Programming has always been fun for me, the challenge of solving problems tells a story and convey an idea. There's so many things i can learn from SovTech mentors and/or employees."
     },
 ]
 
