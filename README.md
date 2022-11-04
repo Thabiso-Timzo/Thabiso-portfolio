@@ -1,4 +1,4 @@
-This bootstrap is based on this project, please click me to :) [Web page link](https://thabiso-sov-tech-challange.vercel.app/).
+This bootstrap is based on this project, please click me. :) [Web page link](https://thabiso-sov-tech-challange.vercel.app/).
 
 Below you will find some information on how to perform common tasks.
 
