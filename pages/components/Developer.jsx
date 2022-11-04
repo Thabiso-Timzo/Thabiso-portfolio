@@ -6,18 +6,20 @@ import Loading from './Loading'
 import { developer_action } from '../../actions/dataActions'
 
 const Developer = () => {
-    const dispatch = useDispatch()
+  // initialise dispatch
+  const dispatch = useDispatch()
 
-    const dataList = useSelector((state) => state.self)
-    const { error, loading, data } = dataList
+  // initialise an action
+  const dataList = useSelector((state) => state.self)
+  const { error, loading, data } = dataList
 
-    useEffect(() => {
-        dispatch(developer_action())
-
-        if (error) {
-            toast.error(error)
-        }
-    }, [dispatch, error])
+  useEffect(() => {
+    dispatch(developer_action())
+    // error handling
+    if (error) {
+      toast.error(error)
+    }
+  }, [dispatch, error])
 
   return (
     <>

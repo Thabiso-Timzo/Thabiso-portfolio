@@ -6,14 +6,17 @@ import Loading from './Loading'
 import { self_action } from '../../actions/dataActions'
 
 const Self = () => {
+   // Initialise dispatch
     const dispatch = useDispatch()
 
+    // Initialise an action
     const self = useSelector((state) => state.developer)
     const { error, loading, data } = self
 
     useEffect(() => {
         dispatch(self_action())
-
+        
+        // Error handling
         if (error) {
             toast.error(error)
         }

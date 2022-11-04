@@ -10,6 +10,7 @@ import {
     SELF_LIST_SUCCESS
 } from "../constants/dataConstants";
 
+// Develop reducer
 export const developerReducer = (state = {data:[]}, action) => {
     switch (action.type) {
       case DEVELOPER_LIST_REQUEST:
@@ -23,6 +24,7 @@ export const developerReducer = (state = {data:[]}, action) => {
     }
 }
 
+// Hobbies reducer
 export const hobbiesReducer = (state = {data:[]}, action) => {
     switch (action.type) {
       case HOBBIES_LIST_REQUEST:
@@ -36,6 +38,7 @@ export const hobbiesReducer = (state = {data:[]}, action) => {
     }
 }
 
+// Self reducers
 export const selfReducer = (state = {data:[]}, action) => {
     switch (action.type) {
       case SELF_LIST_REQUEST:

@@ -11,6 +11,8 @@ import {
     SELF_LIST_SUCCESS
 } from "../constants/dataConstants";
 
+
+// Developer action
 export const developer_action = () => async (dispatch) => {
     try {
         dispatch({type: DEVELOPER_LIST_REQUEST})
@@ -30,6 +32,7 @@ export const developer_action = () => async (dispatch) => {
     }
 }
 
+// Self action
 export const self_action = () => async (dispatch) => {
     try {
         dispatch({type: SELF_LIST_REQUEST})
@@ -49,6 +52,7 @@ export const self_action = () => async (dispatch) => {
     }
 }
 
+// Hobbies action
 export const hobbies_action = () => async (dispatch) => {
     try {
         dispatch({type: HOBBIES_LIST_REQUEST})

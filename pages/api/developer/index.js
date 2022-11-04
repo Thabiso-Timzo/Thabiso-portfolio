@@ -1,5 +1,6 @@
 const { developerData } = require('../../../data/data')
 
+// Developer API
 export default function developerDataHandler(req, res) {
     try {
         return res.status(200).json(developerData)   

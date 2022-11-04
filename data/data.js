@@ -1,3 +1,4 @@
+// Developer data
 export const developerData = [
     {
         id:1,
@@ -14,6 +15,8 @@ export const developerData = [
     },
 ]
 
+
+// Hobbies data
 export const hobbiesData = [
     {
         id: 1,
@@ -49,6 +52,7 @@ export const hobbiesData = [
     }
 ]
 
+// Self data
 export const selfData = [
     {
         id: 1,

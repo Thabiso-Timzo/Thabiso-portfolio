@@ -1,5 +1,6 @@
 const { hobbiesData } = require('../../../data/data')
 
+// Hobbies API
 export default function hobbiesDataHandler(req, res) {
     try {
         return res.status(200).json(hobbiesData)   
