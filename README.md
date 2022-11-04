@@ -1,8 +1,44 @@
-This bootstrap is based on this project, please click me to :) [SovTech Challange](https://thabiso-sov-tech-challange.vercel.app/).
+This bootstrap is based on this project, please click me to :) [Web page link](https://thabiso-sov-tech-challange.vercel.app/).
 
 Below you will find some information on how to perform common tasks.
 
-## Folder Structure of the project
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+  - [npm run dev](#npm-run-dev)
+  - [npm run build](#npm-run-dev)
+  - [npm start](#npm-start)
+  - [npm run link](#npm-run-link)
+- [Supported browsers](#supported-browsers)
+- [Installing a Dependency](#installing-a-dependency) 
+- [Importing a Component](#importing-a-component)
+  - [Developer component](#pagescomponentsdeveloperjsx)
+  - [Hobby component](#pagescomponentshobbiesjsx)
+  - [Self component](#pagescomponentsselfjsx)
+  - [Loading component](#pagescomponentsloadingjsx)
+- [Data](#data)
+  - [Data view](#datadatajs)
+- [API](#api)
+  - [Developer API](#pagesapideveloperindexjs)
+  - [Hobbies API](#pagesapihobbiesindexjs)
+  - [Self API](#pagesapiselfindexjs)
+- [Styles](#styles)
+  - [Global](#globalcss)
+  - [Home](#homemodulecss)
+- [State handling](#state-handling)
+  - [Action](#actions)
+  - [Reducer](#reducers)
+  - [Store](#store)
+
+## Introduction
+
+```
+I'll take you through this project, It's a simple web page where I talk about myself, my hobbies, and why do I want to join sovtech, lastly theres a copyright section on the web page. Its a full stack application where I introduced Redux the project. I also included how to install the whole project and dependencies.
+```
+
+## Folder Structure 
 
 ```
 Thabiso-Portfolio/
@@ -47,6 +83,10 @@ Thabiso-Portfolio/
   package.json
   README.md
 ```
+
+## Installing the project
+
+Make sure you have nodejs installed in your machine. Run this command `npx create-next-app <project-name>` in your terminal.
 
 ## Available Scripts
 
@@ -252,6 +292,7 @@ export default Loading
 
 - The `Loading.jsx` component is imported to `Developer.jsx`, `Hobbies.jsx`, and `Self.jsx` files
 - The `Developer.jsx`, `Hobbies.jsx`, and `Self.jsx` imported to `pages/index.js` file.
+
 ## Data
 
 I used a data instead of a database
@@ -297,7 +338,7 @@ export default function hobbiesDataHandler(req, res) {
 }
 ```
 
-### `pages/api/hobbies/index.js`
+### `pages/api/self/index.js`
 
 ```js
 const { selfData } = require('../../../data/data')
@@ -311,7 +352,7 @@ export default function selfDataHandler(req, res) {
 
 CSS files which I modified to suit the project design and responsiveness
 
-global.css
+### global.css
 
 ```css
 html,
@@ -346,20 +387,148 @@ body {
 }
 ```
 
-becomes this:
+### Home.module.css
 
 ```css
-.App {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.container {
+  /* */
+}
+
+.wrapper{
+  /* */
+}
+
+.header { 
+  /* */ 
+}
+
+.header h3 {
+  /* */
+}
+
+.header p {
+  /* */
+}
+
+.aside { 
+  /* */
+}
+
+.aside h3 {
+  /* */
+}
+
+.aside p {
+  /* */
+}
+
+.content { 
+  /* */ 
+}
+
+.content h3 {
+  /* */
+}
+
+.content p {
+  /* */
+}
+
+.footer {
+  /* */
+}
+
+@media only screen and (max-width: 868px) {
+  .container {
+    /* */
+  }
+  
+  .header,
+  .content {
+    /* */
+  }
+
+  .aside {
+    /* */
+  }
 }
 ```
 
+## State handling
+
+This project consists of redux reducers, actions and store
+
+### actions
+
+### `actions/dataActions.js`
+
+```js
+import axios from 'axios'
+import { 
+    /* import constants*/
+} from "../constants/dataConstants";
+
+export const developer_action = () => async (dispatch) => {
+    // ...
+}
+
+export const self_action = () => async (dispatch) => {
+   // ...
+}
+
+export const hobbies_action = () => async (dispatch) => {
+    // ...
+}
+```
+
+### reducers
+
+### `reducers/dataReducers.js`
+
+```js
+import { 
+    /* import constants*/
+} from "../constants/dataConstants";
+
+export const developerReducer = (state = {data:[]}, action) => {
+   // ...
+}
+
+export const hobbiesReducer = (state = {data:[]}, action) => {
+    // ...
+}
+
+export const selfReducer = (state = {data:[]}, action) => {
+    ...
+}
+```
+
+### store
+
+### `store/store.js`
+
+```js
+mport { createStore, combineReducers, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
+
+import { 
+  /* import reducers */
+} from '../reducers/dataReducer'
+
+const reducer = combineReducers({
+  /* use reducers */
+})
+
+const initialState = {}
+
+const middleware = [thunk]
+
+const store = createStore(
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware))
+)
+
+export default store
+```
